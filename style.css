@@ -1,0 +1,79 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+/* --- Khu vực Xem Trước (Preview Area) --- */
+#preview-area {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+#preview {
+    width: 100%;
+    max-height: 400px; 
+    object-fit: contain; 
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 4px;
+}
+
+#caption {
+    font-size: 1.2em;
+    color: #333;
+    min-height: 2em;
+}
+
+/* --- Thư Viện Ảnh (Gallery) --- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery figure {
+    width: 140px; 
+    height: 140px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: 3px solid transparent; 
+    transition: all 0.2s ease-in-out;
+    border-radius: 4px;
+    /* Rất quan trọng: cho phép trình duyệt hiển thị hiệu ứng focus mặc định */
+    outline: none; 
+}
+
+.gallery figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    border-radius: 4px;
+}
+
+/* HIỆU ỨNG TƯƠNG TÁC: Áp dụng cho cả chuột (:hover) VÀ bàn phím (:focus) */
+.gallery figure:hover,
+.gallery figure:focus {
+    /* Đảm bảo khung viền xuất hiện khi dùng chuột và dùng Tab */
+    border-color: #4CAF50; 
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    transform: scale(1.05); 
+}
